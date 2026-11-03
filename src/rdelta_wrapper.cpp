@@ -662,7 +662,7 @@ public:
           if (deps.size() > 0) {
             CharacterVector key(1);
             key[0] = std::to_string(ccnum) + "," + std::to_string(ccstate);
-            result[key] = deps;
+            result[key] = Rcpp::wrap(deps);
           }
         }
       }
